@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Antique Treasures</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        /* Nav bar will be here */
+        .container {
+            margin-top: 50px;
+            background-color:rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .product-description {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        .product-price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .btn-custom {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav bar will be here -->
+    <nav class="navbar navbar-expand-lg navbar-dark transparent-nav">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="home.html">
+                <img src="logo.png" alt="Logo" height="50" class="d-inline-block">
+                Antique Treasures
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Shop
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="shopDropdown">
+                            <a class="dropdown-item" href="fc.html">Featured Collection</a>
+                            <a class="dropdown-item" href="na.html">New Arrivals</a>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <a href="cart.html" class="btn btn-light ms-2"><img src="cart.png" alt="Cart" height="30"></a>
+                <a href="#" class="btn btn-light ms-2"><img src="user.png" alt="User" height="30" class="rounded-circle"></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-6">
+                <img src="product1.jpg" alt="Product Image" class="product-image">
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <div class="product-title">Antique Victorian necklace</div>
+                <div class="product-description" style="color: rgb(43, 43, 43);">
+                    <b>This elegant Victorian Necklace is crafted with high-quality antique gold and encrusted with a stunning ruby. A perfect piece to add to your precious collection of classic jewelry.</b>
+                </div>
+                <div class="product-price">Price: ₹199999 (Incl. all taxes)</div>
+
+                <!-- Buttons -->
+                <a href="cart.html" class="btn btn-primary btn-custom">BUY NOW</a>
+                <a href="cart.html" class="btn btn-secondary btn-custom">ADD TO CART</a>
+                <a href="product-list.html" class="btn btn-light btn-custom">Back to Products</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

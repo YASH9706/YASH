@@ -1,0 +1,99 @@
+/* Body with background image */
+body {
+    background: url('bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text color */
+    height: 100%;
+}
+
+/* Transparent Navigation Bar */
+.transparent-nav {
+    background-color: rgba(46, 46, 46, 0.6); /* Low opacity background */
+    transition: background-color 0.4s ease-in-out;
+}
+
+/* Logo and Site Name */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Align logo and name vertically */
+}
+
+.navbar-brand h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+    color: #ffffff; /* White color */
+}
+
+/* Main content styling */
+.main-content {
+    padding-top: 150px; /* Space below the navbar */
+    min-height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+.same-size-btn {
+    width: 200px; /* Set a fixed width for both buttons */
+}
+
+/* Buttons */
+.d-grid button {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #b0b0b0; /* Silver button */
+    color: #1c1c1c; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.d-grid button:hover {
+    background-color: #5e5e5e; /* Darker silver on hover */
+}
+
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    .d-grid button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals - Antique Treasures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body id="fc">
+    <nav class="navbar navbar-expand-lg navbar-dark transparent-nav">
+    <div class="container-fluid ">
+        <a class="navbar-brand" href="home.html">
+            <img src="logo.png" alt="Logo" height="50" class="d-inline-block  ">
+            Antique Treasures
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <a class="dropdown-item" href="fc.html">Featured Collection</a>
+                        <a class="dropdown-item" href="na.html">New Arrivals</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reviews.html">Reviews</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+            <a href="cart.html" class="btn btn-light ms-2"><img src="cart.png" alt="Cart" height="30"></a>
+            <a href="#" class="btn btn-light ms-2"><img src="user.png" alt="User" height="30" class="rounded-circle"></a>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-5">
+    <h2 class="text-center mb-4">New Arrivals</h2>
+
+    <div id="product-container" class="d-flex flex-wrap justify-content-between">
+        <!-- Each product card -->
+        <div class="product-card p-3">
+            <div class="card">
+                <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                <div class="card-body">
+                    <h5 class="card-title">Victorian Era Necklace</h5>
+                    <p class="card-text">Price: ₹199999.</p>
+                    <a href="product-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card p-3">
+            <div class="card">
+                <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                <div class="card-body">
+                    <h5 class="card-title">Victorian Ring</h5>
+                    <p class="card-text">Price: ₹99999</p>
+                    <a href="product-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card p-3">
+            <div class="card">
+                <img src="product3.jpg" class="card-img-top" alt="Product 3">
+                <div class="card-body">
+                    <h5 class="card-title">Antique Bracelet</h5>
+                    <p class="card-text">Price: ₹149999</p>
+                    <a href="product-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card p-3">
+            <div class="card">
+                <img src="product4.jpg" class="card-img-top" alt="Product 4">
+                <div class="card-body">
+                    <h5 class="card-title">Antique Pendant</h5>
+                    <p class="card-text">Price: ₹189999</p>
+                    <a href="product-details.html" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more products as needed -->
+    </div>
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   
+
+
+    
+</body>
+</html>

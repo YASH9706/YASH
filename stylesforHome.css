@@ -1,0 +1,85 @@
+body {
+    background: url('backhome.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover;
+     /* Text color */
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent navbar */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Align logo and name vertically */
+}
+
+.navbar .nav-link {
+    font-size: 1.1em; /* Slightly larger text for navbar links */
+}
+
+.navbar .nav-link:hover {
+    color: #FFD700; /* Gold color on hover */
+}
+
+.main-content {
+    text-align: center;
+    padding: 100px 20px; /* Padding for content */
+    position: relative;
+    z-index: 2; /* To ensure text appears above background */
+}
+
+.main-content h1 {
+
+    font-size: 3em; /* Large title */
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.5em; /* Subtitle size */
+    margin-bottom: 40px;
+}
+
+.shop-btn {
+    padding: 10px 30px; /* Button padding */
+    font-size: 1.2em; /* Button text size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Button text color */
+}
+
+.shop-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 50px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .main-content h1 {
+        font-size: 2.5em; /* Reduce title size */
+    }
+
+    .main-content p {
+        font-size: 1.2em; /* Reduce subtitle size */
+    }
+
+    .shop-btn {
+        font-size: 1em; /* Reduce button text size */
+    }
+}
+
+/* Additional styling for dropdown menu */
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Background for dropdown */
+}
+
+.dropdown-item {
+    color: white; /* Text color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #FFD700; /* Gold color on hover for dropdown items */
+}

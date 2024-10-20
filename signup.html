@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <title>Sign Up - Antique Treasures</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .error-message {
+            color: rgba(255, 0, 0,1);
+            font-size: 16px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 text-center">
+    <h2>Sign Up</h2>
+    
+    <form id="signupForm" class="form-signup mt-4">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="middlename">Middle Name</label>
+                <input type="text" class="form-control" id="middlename" name="middlename">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" required>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div id="emailError" class="error-message">Please enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <div id="passwordError" class="error-message">
+                Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm_password">Re-enter Password</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+            <div id="confirmPasswordError" class="error-message">Passwords do not match.</div>
+        </div>
+        <div id="blankerror" class="error-message">Please fill out all required fields.</div>
+
+        <button type="button" class="btn btn-primary btn-block" onclick="validateForm()">Sign Up</button>
+
+        <div class="mt-4">
+            <p>or sign up with</p>
+            <div class="social-buttons" >
+                <button class="btn btn-social"><h3>Google</h3></button>
+                <button class="btn btn-social"><h3>Facebook</h3> </button>
+                <button class="btn btn-social"><h3>Apple</h3></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const middlename = document.getElementById('middlename').value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm_password").value;
+        
+        // Hide all error messages initially
+        document.getElementById("emailError").style.display = "none";
+        document.getElementById("passwordError").style.display = "none";
+        document.getElementById("confirmPasswordError").style.display = "none";
+
+        if (!firstname || !lastname || !middlename || !email || !password || !confirmPassword) {
+            document.getElementById("blankerror").style.display = "block";
+            return;
+        }
+
+        // Email validation using regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById("emailError").style.display = "block";
+            return;
+        }
+
+        // Password validation rules
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+        if (!passwordRegex.test(password)) {
+            document.getElementById("passwordError").style.display = "block";
+            return;
+        }
+
+        // Confirm password validation
+        if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").style.display = "block";
+            return;
+        }
+
+        // If validation passes, redirect to home.html
+        alert("Signup successful!");
+        window.location.href = "home.html";
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

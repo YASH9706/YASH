@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <title>Login - Antique Treasures</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .error-message {
+            color: rgba(255, 0, 0,1);
+            font-size: 1.1em;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 text-center">
+    <h2>Login</h2>
+    <p class="mt-2">Welcome back! Please log in to your account.</p>
+    
+    <form id="loginForm" class="form-login mt-4">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div id="emailError" class="error-message">Please enter a valid email address.</div>
+            <div id="emailError1" class="error-message">Email is required.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <div id="passwordError" class="error-message">Password is required.</div>
+            <div id="passwordError1" class="error-message">
+                Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.
+            </div>
+        </div>
+        
+        <button type="button" class="btn btn-primary btn-block" onclick="validateLoginForm()">Login</button>
+          
+        <div class="mt-4">
+            <p>or login with</p>
+            <div class="social-buttons">
+                <button class="btn btn-social"><h3>Google</h3></button>
+                <button class="btn btn-social"><h3>Facebook</h3></button>
+                <button class="btn btn-social"><h3>Apple</h3></button>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <a href="signup.html">New User? Sign Up</a>
+            <span class="mx-2">|</span>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function validateLoginForm() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        
+        // Hide all error messages initially
+        document.getElementById("emailError").style.display = "none";
+        document.getElementById("emailError1").style.display = "none";
+        document.getElementById("passwordError").style.display = "none";
+        document.getElementById("passwordError1").style.display = "none";
+        if (!email) {
+            document.getElementById("emailError1").style.display = "block";
+            return;
+        }
+        
+
+        // Email validation using regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById("emailError").style.display = "block";
+            return;
+        }
+        
+
+        // Password validation (checking if it's filled)
+        if (!password) {
+            document.getElementById("passwordError").style.display = "block";
+            return;
+        }
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+        if (!passwordRegex.test(password)) {
+            document.getElementById("passwordError1").style.display = "block";
+            return;
+        }
+
+        // If validation passes, redirect to home.html
+        alert("Login successful!");
+        window.location.href = "home.html";
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

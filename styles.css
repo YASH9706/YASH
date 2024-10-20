@@ -1,0 +1,131 @@
+/* styles.css */
+
+/* Body and Container Styles */
+body {
+    background: url('bg1.jpg') no-repeat center center fixed; /* Your background image */
+    background-size: cover; /* Cover the entire page */
+    color: #333; /* Default text color */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Align logo and name vertically */
+}
+#fc {
+    background: url('bgforProuctList.jpg') no-repeat center center fixed; /* Your background image */
+    background-size: cover; /* Cover the entire page */
+    color: #333; /* Default text color */
+}
+#cart {
+    background: url('cart.jpg') no-repeat center center fixed; /* Your background image */
+    background-size: cover; /* Cover the entire page */
+    color: #333; /* Default text color */
+}
+#aboutus{
+    background: url('cart.jpg') no-repeat center center fixed; /* Your background image */
+    background-size: cover; /* Cover the entire page */
+    color: #333; /* Default text color */
+}
+
+.transparent-nav {
+    background-color: rgba(46, 46, 46, 0.6); /* Low opacity background */
+    transition: background-color 0.4s ease-in-out;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.7); /* Light background for readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(208, 206, 206, 0.2); /* Shadow for depth */
+}
+
+/* Form Styles */
+.form-signup {
+    margin-top: 20px; /* Margin above the form */
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #d4af37; /* Custom button color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e0c066; /* Lighter color on hover */
+}
+
+/* Social Button Styles */
+.social-buttons {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+}
+
+.btn-social {
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ccc; /* Border */
+    flex: 1; /* Equal width */
+    margin: 0 5px; /* Spacing between buttons */
+}
+
+.btn-social img {
+    width: 20px; /* Icon size */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.product-card {
+    flex: 0 0 25%; /* Adjust width as needed */
+    transition: transform 0.3s ease;
+}
+
+#product-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+#product-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.product-card {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Styles */
+.cart-item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-details h5, .cart-details p {
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+
+
+/* For Medium Screens (Tablets) */
+@media screen and (max-width: 768px) {
+    .product-card {
+        flex: 1 1 100%; /* Stack cards vertically on small screens */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .product-card {
+        flex: 1 1 calc(50% - 30px); /* Two cards per row on tablets */
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .product-card {
+        flex: 1 1 calc(25% - 30px); /* Four cards per row on desktops */
+    }
+}
